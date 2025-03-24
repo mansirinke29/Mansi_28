@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+        }
+        .catalog {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .category {
+            background: #bbdefb;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(13, 71, 161, 0.2);
+        }
+        .category h2 {
+            text-align: center;
+            color: #0d47a1;
+        }
+        .books {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .book {
+            background: #90caf9;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 0 5px rgba(13, 71, 161, 0.2);
+        }
+        .book img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .book button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #0d47a1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .book button:hover {
+            background: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; color:#0d47a1;">Books Catalog</h1>
+    <div class="catalog">
+        <div class="category">
+            <h2>Programming</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/61HUuiDH+0L._SY522_.jpg" alt="Book 1">
+                    <h3>Learn JavaScript</h3>
+                    <p>Price: ₹500</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/41CpMrFKWCL._SY445_SX342_.jpg" alt="Book 2">
+                    <h3>Python Basics</h3>
+                    <p>Price: ₹600</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/419YVEwR-HL._SX342_SY445_.jpg" alt="Book 3">
+                    <h3>Mastering Java</h3>
+                    <p>Price: ₹700</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Fiction</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/9129a0fOJQL._AC_UF1000,1000_QL80_.jpg" alt="Book 1">
+                    <h3>The Lost World</h3>
+                    <p>Price: ₹400</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="book">
+                    <img src="https://d1rj087f48l8b.cloudfront.net/public/BookCovers/book_128165_1.png?width=500" alt="Book 2">
+                    <h3>Fantasy Land</h3>
+                    <p>Price: ₹450</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/7155YeGxLJL._AC_UF1000,1000_QL80_.jpg" alt="Book 3">
+                    <h3>Adventures Unknown</h3>
+                    <p>Price: ₹480</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Non-Fiction</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQGOamArSb9TGpzyOBpXHg66krOxUhHZL1w7-IS9AuNdG_1uK5OqaH4epOGAKnzPcgrd3thwdCj9zSGUqK1Ar5FgebGuEUJ379_rkViLC6uuhiC7xzKTR2rOg&usqp=CAE" alt="Book 1">
+                    <h3>Self Growth</h3>
+                    <p>Price: ₹550</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="book">
+                    <img src="https://d34a0mln2492j4.cloudfront.net/unsigned/resize:fit:317:447:0/gravity:sm/plain/https%3A%2F%2Fbookscape-s3-bucket.s3.amazonaws.com%2Fproduct_images%2F9798892774529.jpg" alt="Book 2">
+                    <h3>Mindset Matters</h3>
+                    <p>Price: ₹520</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="book">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTFma6r-gGpCh6FSAwpKP6SXOSeSsped-4NiTsEBMh82DxpiFOiKfadenJzZhqEaWN7mDgg6UU5eGQS0XxCpf185ecpM_nKaR1-kM9bzU1kXzbBl9oLtt6KkA&usqp=CAE" alt="Book 3">
+                    <h3>History Revisited</h3>
+                    <p>Price: ₹600</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

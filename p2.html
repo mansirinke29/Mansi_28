@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beautiful Bootstrap Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-item {
+            text-align: center;
+        }
+        .carousel-item img {
+            max-height: 300px; /* Adjust height */
+            max-width: 60%; /* Reduce width */
+            object-fit: contain; /* Ensures full image visibility */
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .carousel-caption {
+            display: none; /* Hide default caption */
+        }
+        .slide-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="my-4 text-primary">Welcome to Our Beautiful Slider</h1>
+    </div>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://media.istockphoto.com/id/1550071750/photo/green-tea-tree-leaves-camellia-sinensis-in-organic-farm-sunlight-fresh-young-tender-bud.jpg?s=612x612&w=0&k=20&c=RC_xD5DY5qPH_hpqeOY1g1pM6bJgGJSssWYjVIvvoLw=" class="d-block w-100" alt="Slide 1">
+                <h5 class="slide-text">First Slide - The Beauty of Nature</h5>
+            </div>
+            <div class="carousel-item">
+                <img src="https://media1.thehungryjpeg.com/thumbs2/800_3740488_52y56t0u033c7ldzt4imr365696cfcorzyoefuks_create-something-amazing-today-svg-dxf-png.jpg" class="d-block w-100" alt="Slide 2">
+                <h5 class="slide-text">Second Slide - Create Something Amazing</h5>
+            </div>
+            <div class="carousel-item">
+                <img src="https://preview.redd.it/something-about-white-flowers-feels-elegant-and-opulent-v0-7ncyptymjicd1.jpeg?width=1080&crop=smart&auto=webp&s=2ef16b17c9628e0604f8382f88f5517359414456" class="d-block w-100" alt="Slide 3">
+                <h5 class="slide-text">Third Slide - Elegance in Bloom</h5>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container text-center my-4">
+        <p class="text-muted">Enjoy this beautiful and responsive Bootstrap slider.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

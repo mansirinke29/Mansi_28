@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+        }
+
+        header {
+            background-color: #3498db; 
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 50px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 22px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+        
+        nav {
+            background-color: #2c3e50; 
+            padding: 20px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3498db; 
+            color: #333; 
+        }
+
+        .content-wrapper {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        .icons {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 55px;
+            color: #333;
+        }
+
+        .icons i {
+            margin: 0 30px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .icons i:hover {
+            color: #00aaff; 
+        }
+
+        footer {
+            background-color: #2c3e50; 
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" target="contentFrame"><i class="fas fa-home"></i> Home</a>
+    <a href="book_catalog.html" target="contentFrame"><i class="fas fa-book-open"></i> Book Catalog</a>
+    <a href="booklogin.html" target="contentFrame"><i class="fas fa-sign-in-alt"></i> Login</a>
+</nav>
+
+<div class="content-wrapper">
+    <header>
+        <h1>Welcome to Bookstore</h1>
+        <p>Discover the world of books and more!</p>
+    </header>
+         
+    <body>
+        <div class="container">
+            <div class="sale">
+                <img src="https://thcentre.com/wp-content/uploads/2024/03/book-sale-for-website-image.jpg" alt="Big Sale">
+                <p class="quote">"A reader lives a thousand lives before he dies." - George R.R. Martin</p>
+            </div>
+            <div class="section">
+                <h2>Featured Books</h2>
+                <div class="book">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQcbpo5egJnMVxe70AotxroR4BPHVQMAonfQ&s" alt="Book 1">
+                    <p>THE DAYS I LOVED YOU</p>
+                    <div>₹250</div>
+                </div>
+                <div class="book">
+                    <img src="https://kitabay.com/cdn/shop/files/327560aa27038e91206b8d5f0011342e.jpg?v=1739255076&width=254" alt="Book 2">
+                    <p>WARRIOR RACE</p>
+                    <div>₹399</div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div class="icons">
+        <i class="fas fa-book"></i>
+        <i class="fas fa-book-reader"></i>
+        <i class="fas fa-laptop-code"></i>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bookstore. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>

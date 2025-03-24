@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TARANG Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> <!-- New fonts -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; 
+            background-color: #f3e5f5;  
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid #ec407a; 
+
+        h1 {
+            text-align: center;
+            font-family: 'Lobster', cursive;  
+            color: #8e24aa;  
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 20px;
+            font-weight: 500;
+            color: #7b1fa2;
+            font-size: 16px;
+        }
+
+        input, select {
+            padding: 14px;
+            margin-top: 8px;
+            border: 1px solid #ab47bc;  
+            border-radius: 8px;
+            font-size: 16px;
+            color: #4a148c;  
+            background-color: #f3e5f5;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 14px;
+            background-color: #ec407a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #d81b60; 
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        label input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TARANG Registration</h1>
+        <form action="/submit" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+            <label for="Branch">Branch</label>
+            <select id="Branch" name="Branch" required>
+                <option value="">Select your branch</option>
+                <option value="AI">AI</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="CSE">CSE</option>
+                <option value="EE">EE</option>
+                <option value="ETC">ETC</option>
+            </select>
+
+            <label for="Year">Year</label>
+            <select name="Year" id="Year" required>
+                <option value="">Select your year</option>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+            </select>
+
+            <label>Event</label>
+            <div>
+                <label for="Dancing"> Dancing<input type="checkbox" id="Dancing" name="Dancing" value="Dancing"></label>
+                <label for="Singing"> Singing<input type="checkbox" id="Singing" name="Singing" value="Singing"></label>
+                <label for="Fashion Show"> Fashion Show<input type="checkbox" id="Fashion Show" name="Fashion Show" value="Fashion Show"></label>
+                <label for="Treasure Hunt"> Treasure Hunt<input type="checkbox" id="Treasure Hunt" name="Treasure Hunt" value="Treasure Hunt"></label>
+                <label for="Mehendi Competition"> Mehendi Competition<input type="checkbox" id="Mehendi Competition" name="Mehendi Competition" value="Mehendi Competition"></label>
+            </div>
+
+            <a href="reg_lastPage.html" class="btn">Register</a>
+        </form>        
+    </div>
+</body>
+</html>

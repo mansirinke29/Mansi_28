@@ -1,0 +1,71 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            background: skyblue;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color:  #2c3e50;
+            padding: 20px;
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .menu {
+            width: 300px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            margin: 10px 0;
+            background:  #2c3e50;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background:  #2c3e50;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+<div class="header">The Little Book Den!!!</div>
+<div class="menu">
+    <a href="login.html" target="rightFrame">Login</a>
+    <a href="home.html" target="rightFrame">Home</a>
+    <a href="cataloge.html" target="rightFrame">Catalog</a>
+</div>
+
+</body>
+</html>

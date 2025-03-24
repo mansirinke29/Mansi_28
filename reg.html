@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #aaa;
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input.error {
+            border-color: red;
+            background-color: #ffe6e6;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <div class="error-message" id="firstNameError"></div>
+            
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <div class="error-message" id="lastNameError"></div>
+            
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="error-message" id="passwordError"></div>
+            
+            <input type="email" id="email" placeholder="Email" required>
+            <div class="error-message" id="emailError"></div>
+            
+            <input type="text" id="mobile" placeholder="Mobile Number" required>
+            <div class="error-message" id="mobileError"></div>
+            
+            <input type="text" id="address" placeholder="Address" required>
+            <div class="error-message" id="addressError"></div>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            function setError(id, message) {
+                let input = document.getElementById(id);
+                let errorDiv = document.getElementById(id + "Error");
+                if (message) {
+                    input.classList.add("error");
+                    errorDiv.textContent = message;
+                    isValid = false;
+                } else {
+                    input.classList.remove("error");
+                    errorDiv.textContent = "";
+                }
+            }
+
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+            let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let address = document.getElementById("address").value;
+            
+            // Validate First Name
+            setError("firstName", /^[A-Za-z]{6,}$/.test(firstName) ? "" : "First name must be at least 6 characters long and contain only alphabets.");
+            
+            // Validate Last Name
+            setError("lastName", lastName.trim() ? "" : "Last name cannot be empty.");
+            
+            // Validate Password
+            setError("password", password.length >= 6 ? "" : "Password must be at least 6 characters long.");
+            
+            // Validate Email
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            setError("email", emailPattern.test(email) ? "" : "Invalid email format.");
+            
+            // Validate Mobile Number
+            setError("mobile", /^[0-9]{10}$/.test(mobile) ? "" : "Mobile number must be exactly 10 digits.");
+            
+            // Validate Address
+            setError("address", address.trim() ? "" : "Address cannot be empty.");
+            
+            return isValid;
+        }
+    </script>
+</body>
+</html>
